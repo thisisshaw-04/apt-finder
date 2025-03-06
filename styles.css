@@ -59,7 +59,7 @@ h1 {
     text-align: center;
     font-family: "box";
     letter-spacing: -5px;
-    font-size: 14.6vmin;
+    font-size:7.8vw;
     margin-top: -15px;
     margin-bottom: -65px;
 }
@@ -90,7 +90,7 @@ h2 {
     border: #000 solid;
     grid-template-rows: 27% 73%;
     grid-template-columns: 24% 19% 19% 19% 19%;
-
+ 
 }
 
 .grid-container>div {
@@ -113,7 +113,7 @@ h2 {
     grid-area: char;
     position: relative;
     /* Required to position the pseudo-element */
-    background-image: none;
+    background-image: url(people.jpg);
     background-position: center;
     background-size: cover;
     padding: 20px;
@@ -127,17 +127,28 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    border-top: 28px solid #ffffff;
-    border-right: 30px solid #ffffff;
-    border-bottom: 23px solid #ffffff;
-    border-left: 30px solid #ffffff;
+    border: 28px solid #ffffff;
     pointer-events: none; /* Ensures the border doesn't interfere with interactions */
 }
 
 .item4 {
     grid-area: flat;
-    background-image: none;
+    position: relative;
+    background-image: url(building.jpg);
     background-position: center;
+    background-size: cover;
+    padding: 20px;
+}
+
+.item4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 28px solid #ffffff;
+    pointer-events: none; /* Ensures the border doesn't interfere with interactions */
 }
 
 p {

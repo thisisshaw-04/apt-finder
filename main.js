@@ -136,7 +136,7 @@ function displayImage() {
 
     // Validate input: Check if either input is empty
     if (!input1 || !input2) {
-        alert("Please enter both fields before proceeding!");
+        alert("You can't live in the quantum space yet you know.");
         return; // Exit the function if either field is empty
     }
 
@@ -145,7 +145,7 @@ function displayImage() {
 
     // Validate input range
     if (index < 0 || index >= 6 || input1 < 1 || input1 > 11) {
-        alert("Invalid input. Please enter valid numbers and letters.");
+        alert("Evidently doomscrolling has chewed away at your attention span. READ and try again.");
         return; // Exit the function if the input is invalid
     }
 
