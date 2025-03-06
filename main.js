@@ -125,7 +125,7 @@ const nope = [
     "No space here, but who knows what the next unit holds?"
 ];
 
-const cat = ["char/yay.gif","https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWo3aWN3dHlyd2s5dHp1Znd2aTV1dWl2b3Q5eGxhcHFyd3N5bnlteCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4KibK3JwaVo0CjDO/giphy.gif","https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2NiM3MycDdlMGg2eTdoNnZxbWhsaWhjNHl6aTlrNDgzeGQyamswZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9NAXEP3RiJjm8/giphy.gif", "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXNpdnB2YXlmaHNjYmltZnRpaXcxZ2s0ZjRqeDFjbXJxMXN4Nms1NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/beorHuw3tM7tcAFB0v/giphy.gif","https://media.tenor.com/T_avUEk3aWwAAAAi/catgroove7tv-catgroove.gif","https://media.tenor.com/TrZcpR0Kde8AAAAj/cat-meme-funny.gif"]
+const cat = ["https://c.tenor.com/zN5C2mTeYWoAAAAC/tenor.gif","https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWo3aWN3dHlyd2s5dHp1Znd2aTV1dWl2b3Q5eGxhcHFyd3N5bnlteCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4KibK3JwaVo0CjDO/giphy.gif","https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2NiM3MycDdlMGg2eTdoNnZxbWhsaWhjNHl6aTlrNDgzeGQyamswZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9NAXEP3RiJjm8/giphy.gif", "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXNpdnB2YXlmaHNjYmltZnRpaXcxZ2s0ZjRqeDFjbXJxMXN4Nms1NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/beorHuw3tM7tcAFB0v/giphy.gif","https://media.tenor.com/T_avUEk3aWwAAAAi/catgroove7tv-catgroove.gif","https://media.tenor.com/TrZcpR0Kde8AAAAj/cat-meme-funny.gif"]
 function displayImage() {
     const input1 = Number(document.getElementById("charInput1").value);
     const input2 = document.getElementById("charInput2").value.toUpperCase();
