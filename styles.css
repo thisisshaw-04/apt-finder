@@ -1,0 +1,94 @@
+@font-face {
+    font-family: layout;
+    src: url(PaperCube-4W6Y.ttf);
+    font-weight: bold;
+}
+
+/* STYLE FOR THE INPUT FIELD */
+#charInput1 {
+    margin: 10px;
+    margin-left: 0;
+    font-family: "Titillium Web";
+    text-align: center;
+    border-radius: 0;
+}
+
+#charInput2 {
+    margin: 10px;
+    font-family: "Titillium Web";
+    text-align: center;
+    border-radius: 0;
+}
+
+/* STYLE FOR THE SUBMIT BUTTON */
+#submitButton {
+    margin: 10px;
+    font-family: "Titillium Web";
+    border-radius: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0px 15px;
+    border-style: solid;
+    margin-right: 0;
+}
+
+/* STYLE FOR THE IMAGE */
+#displayedImage {
+    display: none;
+    height: 473.5px;
+    width: 473.5px;
+    /* This line is mandatory */
+}
+
+#displayedChar {
+    display: none;
+    height: 100px;
+    width: 100px;
+    /* This line is mandatory */
+}
+
+.image {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.under {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 98vh;
+    font-family: "Titillium Web";
+}
+
+.input {
+    width: auto;
+    display: flex;
+    gap: space-evenly;
+    justify-content: center;
+margin-top: 5rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: "layout";
+    font-size: 14vmin;
+    margin-top: -78vh;
+}
