@@ -1,46 +1,55 @@
- // Array of images
-        // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
-        const images = [];
-        for (let i = 0; i < 6; i++) {
-            images.push("flat/flat" + (i + 1) + ".jpg")
-        }
+// Array of images
+const images = [];
+for (let i = 0; i < 6; i++) {
+    images.push("flat/flat" + (i + 1) + ".jpg");
+}
 
-        const char = [];
-        for (let i = 0; i < 58; i++) {
-            char.push("char/char" + (i + 1) + ".png")
-        }
+const char = [];
+for (let i = 0; i < 70; i++) {
+    char.push("char/char" + (i + 1) + ".png");
+}
 
-        function displayImage() {
-            const input2 = document.getElementById("charInput2").value.toUpperCase();
-            const input1 = Number(document.getElementById("charInput1"));
-            const imgElement = document.getElementById("displayedImage");
-            const charElement = document.getElementById("displayedChar");
+const desc = [""]
 
-            // Assign an image based on character (A-Z)
-            const index = input2.charCodeAt(0) - 65; // 'A' is 65 in ASCII
-            if (index >= 0 && index < images.length) {
-                imgElement.src = images[index];
-                imgElement.style.display = "block";
-            }
+function displayImage() {
+    const input1 = Number(document.getElementById("charInput1").value);
+    const input2 = document.getElementById("charInput2").value.toUpperCase();
+    const imgElement = document.querySelector(".item4");
+    const charElement = document.querySelector(".item3");
 
-            // if (input1 === "1" && input2 ==="A") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
-            //     charElement.src = "/char/char1.png"
-            //     charElement.style.display = "block";
-            // }
+    // Assign an image based on character (A-Z)
+    const index = input2.charCodeAt(0) - 65; // 'A' is 65 in ASCII
 
-            // if (input1 === "1" && input === "A") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
-            //     charElement.src = "/char/char1.png"
-            //     charElement.style.display = "block";
-            // }
+    // Validate input
+    if (index < 0 || index >= 6 || input1 < 1 || input1 > 11) {
+        alert("idiot");
+        return; // Exit the function if the input is invalid
+    }
 
-            else {
-                /* 
-                alert("Please enter a letter between A and Z.");
-                imgElement.style.display = "none";
-                */
+    // Set flat image based on input2 (A-F)
+    imgElement.style.backgroundImage = `url(${images[index]})`;
 
-                // IF INVALID INPUT IS ENTERED, DISPLAY ALTERNATE IMAGE
-                imgElement.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmtkdnJhMXY4Njd1cXR3MTM3MW1nMzZ1NXNhNHlhOHA0MWF2dDUzdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13dRJkj5wgKq9q/giphy.gif"
-                imgElement.style.display = "block";
-            }
-        }
+    // Set character image based on input1 (1-10) and the current index
+    const charIndex = index + (input1 - 1) * 6;
+    if ([5, 9, 13, 22, 30, 32, 39, 47, 50, 55, 62].includes(charIndex)) {
+        charElement.style.backgroundImage = `url("/char/yay.gif")`;
+        charElement.style.backgroundPosition = "center";
+        charElement.style.backgroundSize = "cover";
+    }
+    else {
+        charElement.style.backgroundImage = `url(${char[charIndex]})`;
+    }
+}
+
+// Add event listener to trigger `displayImage` on pressing Enter
+document.getElementById("charInput1").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        displayImage(); // Call the displayImage function when Enter is pressed
+    }
+});
+
+document.getElementById("charInput2").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        displayImage(); // Call the displayImage function when Enter is pressed
+    }
+});
