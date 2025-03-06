@@ -25,6 +25,7 @@
     text-align: center;
     border-radius: 0;
     text-transform: uppercase;
+    margin-right: 0;
 }
 
 /* STYLE FOR THE SUBMIT BUTTON */
@@ -59,7 +60,7 @@ h1 {
     text-align: center;
     font-family: "box";
     letter-spacing: -5px;
-    font-size:7.8vw;
+    font-size: 7.8vw;
     margin-top: -15px;
     margin-bottom: -65px;
 }
@@ -67,7 +68,7 @@ h1 {
 h2 {
     text-align: center;
     font-family: "layout";
-    font-size: 4.5vmin;
+    font-size: 2.4vw;
     color: #ffffff;
     line-height: 40px;
     padding-top: 10px;
@@ -90,7 +91,7 @@ h2 {
     border: #000 solid;
     grid-template-rows: 27% 73%;
     grid-template-columns: 24% 19% 19% 19% 19%;
- 
+
 }
 
 .grid-container>div {
@@ -128,7 +129,8 @@ h2 {
     right: 0;
     bottom: 0;
     border: 28px solid #ffffff;
-    pointer-events: none; /* Ensures the border doesn't interfere with interactions */
+    pointer-events: none;
+    /* Ensures the border doesn't interfere with interactions */
 }
 
 .item4 {
@@ -148,15 +150,161 @@ h2 {
     right: 0;
     bottom: 0;
     border: 28px solid #ffffff;
-    pointer-events: none; /* Ensures the border doesn't interfere with interactions */
+    pointer-events: none;
+    /* Ensures the border doesn't interfere with interactions */
 }
 
 p {
     font-family: "Josefin Slab";
-    font-size: 2.5vh;
+    font-size: 2.2vh;
 }
 
 .desc {
- 
-    height: 14vh;
+
+    height: 16.5vh;
+}
+
+/* Responsive Styles */
+
+/* Large Tablets and Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-rows: 27% 73%;
+        grid-template-columns: 24% 19% 19% 19% 19%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 7.3vw;
+        letter-spacing: -3px;
+        margin-bottom: -3rem;
+    }
+
+    h2 {
+        font-size: 2.4vw;
+    }
+
+    p {
+        font-size: 2.2vh;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+       html, body {
+        height: 100vh;  
+        padding: 0;
+    }
+
+    .grid-container {
+        min-height: 100vh;  
+        display: grid;
+        grid-template-areas:
+            'header'
+            'main'
+            'char'
+            'flat';
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr 1fr 1fr; 
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 10vw;
+        margin-bottom: -40px;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    .item3::before,
+    .item4::before {
+        border: 20px solid #ffffff;
+    }
+
+    .item3,
+    .item4 {
+        height: 100vh;
+    }
+
+    p {
+        font-size: 3vh;
+        padding: 0px 8rem;
+    }
+
+    .desc {
+        height: auto;
+    }
+
+    .input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #charInput1,
+    #charInput2 {
+        width: 80%;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #submitButton {
+        width: auto;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 12vw;
+        line-height: 1;
+        margin: 20px 0px;
+    }
+
+    h2 {
+        font-size: 6vw;
+        line-height: 1.2;
+        margin: 0px -9px;
+    }
+
+    .item3::before,
+    .item4::before {
+        border: 15px solid #ffffff;
+    }
+
+    .item3,
+    .item4 {
+        height: 50vh;
+    }
+
+    p {
+        font-size: 2.5vh;
+        padding: 0 3rem;
+    }
+
+    #charInput1,
+    #charInput2 {
+        width: 83%;
+        padding: 10px;
+    }
+
+    #submitButton {
+        width: 89%;
+        padding: 6px 0;
+        font-size: 4vw;
+        margin: 10px 10px;
+    }
+
+    .input {
+        margin: 1rem 0;
+    }
 }
