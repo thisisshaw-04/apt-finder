@@ -4,6 +4,12 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: box;
+    src: url(PaperCubeBoxVersion-0j6r.ttf);
+    font-weight: bold;
+}
+
 /* STYLE FOR THE INPUT FIELD */
 #charInput1 {
     margin: 10px;
@@ -36,7 +42,7 @@
 /* STYLE FOR THE IMAGE */
 
 body {
- background-color: #000;
+    background-color: #000;
     font-family: "Titillium Web";
     padding: 0%;
 }
@@ -46,15 +52,29 @@ body {
     display: flex;
     gap: space-evenly;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 3.5rem;
 }
 
 h1 {
     text-align: center;
-    font-family: "layout";
-    font-size: 14vmin;
+    font-family: "box";
+    letter-spacing: -5px;
+    font-size: 14.6vmin;
     margin-top: -15px;
     margin-bottom: -65px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "layout";
+    font-size: 4.5vmin;
+    color: #ffffff;
+    line-height: 40px;
+    padding-top: 10px;
+    margin-top: 0;
+    background-color: #000;
+    padding-bottom: 13.5px;
+    font-weight: bold;
 }
 
 .grid-container {
@@ -69,6 +89,7 @@ h1 {
     height: 97.5vh;
     border: #000 solid;
     grid-template-rows: 27% 73%;
+    grid-template-columns: 24% 19% 19% 19% 19%;
 
 }
 
@@ -85,16 +106,46 @@ h1 {
 
 .item2 {
     grid-area: main;
+    padding: 8%;
 }
 
 .item3 {
     grid-area: char;
+    position: relative;
+    /* Required to position the pseudo-element */
     background-image: none;
     background-position: center;
+    background-size: cover;
+    padding: 20px;
+    /* Optional padding to give space for the border */
+}
+
+.item3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 28px solid #ffffff;
+    border-right: 30px solid #ffffff;
+    border-bottom: 23px solid #ffffff;
+    border-left: 30px solid #ffffff;
+    pointer-events: none; /* Ensures the border doesn't interfere with interactions */
 }
 
 .item4 {
     grid-area: flat;
     background-image: none;
     background-position: center;
+}
+
+p {
+    font-family: "Josefin Slab";
+    font-size: 2.5vh;
+}
+
+.desc {
+ 
+    height: 14vh;
 }
